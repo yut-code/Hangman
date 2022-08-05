@@ -1,0 +1,461 @@
+*Due to game having different special words each time we will be simulating only one fruit (mango - hint: "Its a tropical yellow fruit.") for our test case. The 2nd generated fruit will be lime - hint: "Green and sour! Superior green skittle flavour." The games mechanics works the same for all other fruit. The underscores are for seperations sake so you can see the change betwen test cases theyre not part of expected output.
+
+# Asking for a hint entering a correct letter (o) a list a capital letter a 9 a word (not a single letter) an incorrect letter a period to end the program.
+
+Input:
++
+o
+a
+L
+9 
+banana
+g
+.
+
+Expected Output:
+Welcome to Hangman - Fruit Edition!
+Guess the letters of the fruit:
+_ _ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: +
+Its a tropical yellow fruit.
+
+Enter your guess for a single letter: o
+Correct!
+_ _ _ _ o
+
+Enter your guess for a single letter: a
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: L
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: 9
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: banana
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: j
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|
+|
+L
+
+Enter your guess for a single letter: .
+Bye!
+
+___________
+# Entering 6 incorrect letters so the hangman dies. After that the user enters 1 to play again but then changes her/his mind and enters a period to exit. 
+
+Input:
+j
+i
+p
+o
+r
+e
+e
+1
+.
+
+Expected Output:
+Welcome to Hangman - Fruit Edition!
+Guess the letters of the fruit:
+_ _ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: j
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|
+|
+L
+
+Enter your guess for a single letter: i
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|     |
+|
+L
+
+Enter your guess for a single letter: p
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|
+|
+L
+
+Enter your guess for a single letter: o
+Correct!
+_ _ _ _ o
+
+Enter your guess for a single letter: r
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|\ 
+|
+L
+
+Enter your guess for a single letter: e
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|\ 
+|     /
+L
+
+Enter your guess for a single letter: e
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|\ 
+|     /\ 
+L
+
+
+GAME OVER...
+You lose!! The answer was: mango
+
+Want to play again? (Enter 1 for yes and 2 for no) 1
+Guess the letters of the fruit:
+_ _ _ _ ## or another amount of underscores
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: .
+Bye!
+
+__________
+# Entering all correct letters which ends the game. When prompted to play again the user inputs a string instead of 1 and 2. Then after inputting a number 2 the game ends. 
+
+input: 
+m
+a 
+n
+g
+o
+yes
+2
+
+Expected Output:
+Welcome to Hangman - Fruit Edition!
+Guess the letters of the fruit:
+_ _ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: m 
+Correct!
+m _ _ _ _
+
+Enter your guess for a single letter: n 
+Correct!
+m _ n _ _
+
+Enter your guess for a single letter: a
+Correct!
+m a n _ _
+
+Enter your guess for a single letter: g
+Correct!
+m a n g _
+
+Enter your guess for a single letter: g
+Correct!
+m a n g o
+
+GAME OVER...
+Congratulations You Win!
+
+Want to play again? (Enter 1 for yes and 2 for no) yes
+Please enter 1 or 2!
+
+Want to play again? (Enter 1 for yes and 2 for no) 2
+Ok. Goodbye have a nice day!
+
+#Entering a few correct letters but takes too many tries to get it right. The game ends and the user inputs 1 to play again generating a new fruit. Asking for a hint the user guesses the fruit correctly and ends the game. When asked to play again the user declines by entering 2. 
+
+Input:
+a
+s
+t
+o
+m
+u
+h
+j
+b
+1
++
+l
+i
+m
+e
+2
+
+Welcome to Hangman - Fruit Edition!
+Guess the letters of the fruit:
+_ _ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: +
+Its a tropical yellow fruit.
+
+Enter your guess for a single letter: a
+Correct!
+_ a _ _ _
+
+Enter your guess for a single letter: s
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|
+|
+L
+
+Enter your guess for a single letter: t
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|     |
+|
+L
+
+Enter your guess for a single letter: o
+Correct!
+_ a _ _ o
+
+Enter your guess for a single letter: m
+Correct!
+m a _ _ o
+
+Enter your guess for a single letter: u
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|
+|
+L
+
+Enter your guess for a single letter: h
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|\ 
+|
+L
+
+Enter your guess for a single letter: j
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|\ 
+|     /
+L
+
+Enter your guess for a single letter: b
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|    /|\ 
+|     /\ 
+L
+
+
+GAME OVER...
+You lose!! The answer was: mango
+
+Want to play again? (Enter 1 for yes and 2 for no) 1
+Guess the letters of the fruit:
+_ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: +
+Green and sour! Superior green skittle flavour.
+
+Enter your guess for a single letter: l
+Correct!
+l _ _ _
+
+Enter your guess for a single letter: i
+Correct!
+l i _ _
+
+Enter your guess for a single letter: m
+Correct!
+l i m _
+
+Enter your guess for a single letter: e
+Correct!
+l i m e
+Congratulations You Win!
+
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) 2
+Ok. Goodbye have a nice day!
+
+__________
+# Entering correct letters and incorrect. We also test to input both lowercase and uppercase letters and when asked to play again we enter numbers outside of 1 and 2 a string float list boolean and finally 1. When playing the game we enter ++ and ... as invalid inputs. After checking to ask for the correct hint after looping we enter an incorrect letter and end the program by entering a single period. 
+# input 
+m
+q
+aA
+a
+n
+g
+o
+3
+-1
+NOOOO
+4.5
+a
+true
+1
+++
+...
++
+a
+.
+
+# Expected output:
+Welcome to Hangman - Fruit Edition!
+Guess the letters of the fruit:
+_ _ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: +
+Its a tropical yellow fruit.
+
+Enter your guess for a single letter: m
+Correct!
+m _ _ _ _
+
+Enter your guess for a single letter: q
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|
+|
+L
+
+Enter your guess for a single letter: aA
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: a
+Correct!
+m a _ _ _
+
+Enter your guess for a single letter: n
+Correct!
+m a n _ _
+
+Enter your guess for a single letter: g
+Correct!
+m a n g _
+
+Enter your guess for a single letter: o
+Correct!
+m a n g o
+
+
+GAME OVER...
+Congratulations You Win!
+
+Want to play again? (Enter 1 for yes and 2 for no) 3
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) -1
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) NOOOO
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) 4.5
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) a
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) true
+Please enter 1 or 2!
+Want to play again? (Enter 1 for yes and 2 for no) 1
+Guess the letters of the fruit:
+_ _ _ _ _
+
+To quit type .
+For a hint type +
+I-----┓
+|
+|
+|
+L
+
+Enter your guess for a single letter: ++
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: ...
+Enter one lowercase letter from the alphabet!
+
+Enter your guess for a single letter: +
+Green and sour! Superior green skittle flavour.
+
+Enter your guess for a single letter: a
+Uh oh! Hangman gained a body part! Try again.
+I-----┓
+|     O
+|
+|
+L
+
+Enter your guess for a single letter: .
+Bye!
